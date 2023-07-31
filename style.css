@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&family=Lobster&family=Righteous&display=swap');
+
+body{
+    cursor: url(xcursor.png), auto;
+    font-family: 'Anek Malayalam', sans-serif;
+    background-color: darkslategray;
+}
+nav{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 47, 47);
+    height: 95px;
+    box-shadow: 0 0 10px grey;
+}
+nav h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+    letter-spacing: 4.5px;
+    
+}
+.gameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  position: relative;
+}
+.container img{
+    display: none;
+    /* width: 20vw; */
+    position: absolute;
+    left: 5vw;
+    top: 5vw;
+    /* animation: congrats 1.5s ease-in-out  1 forwards ; */
+}
+@keyframes congrats {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0.5);
+    }
+}
+.box{
+    border: 4.5px solid rgb(12, 31, 31);
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: cadetblue;
+}
+.infoReset{
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.info{
+    margin: 0 20px;
+    display: inline-block;
+}
+#reset{
+    background-color: rgb(68, 111, 112);
+    /* display: inline-block; */
+    font-family: inherit;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 6px 4px;
+    border: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 22px;
+    width: 30vw;
+}
+#reset:hover{
+    box-shadow: 0 0 20px rgb(21, 47, 47);
+}
+
+.br0 {
+    border-right: 0;
+}
+.bl0{
+    border-left: 0;
+}
+.bt0{
+    border-top: 0;
+}
+.bb0{
+    border-bottom: 0;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 47, 47);
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    height: 40px;
+}
+.footer a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 10px;
+}
+@media screen and (max-width: 420px){
+    nav h1{
+        font-size: 47px;
+    }
+    .info{
+        font-size: 29px;
+    }
+    .container{
+        grid-template-columns: repeat(3, 28vw);
+        grid-template-rows: repeat(3, 28vw);
+    }
+    .box{
+        font-size: 20vw;
+    }
+    #reset{
+        width: 84vw;
+        margin-top: 25px;
+    }
+    .footer{
+        font-size: 17px;
+    }
+    .container img{
+        display: none;
+        /* width: 20vw; */
+        position: absolute;
+        left: 14vw;
+        top: 14vw;
+        /* animation: congrats 1.5s ease-in-out  1 forwards ; */
+    }
+}
+
+@media screen and (max-height: 920px) and (min-height: 890px) {
+    .container{
+        margin-top: 30px;
+    }
+    #reset{
+        margin-top: 50px;
+    }
+    .infoReset{
+        margin-top: 60px;
+    }
+}
+
+/* @media only screen and (max-height: 723px) and (min-height: 650px) {
+    .infoReset{
+        margin-top: 15px;
+    }
+} */
+
+/* .small{
+    width: 6px;
+    height: 6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  .big{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20rem;
+    animation-name: stretch;
+              animation-duration: 2.0s;
+              animation-timing-function: ease-out;
+              animation-direction: alternate;
+              animation-iteration-count: infinite;
+              animation-play-state: running;
+  }
+  
+  
+  @keyframes stretch {
+              0% {
+  
+                  opacity: 0.2;
+                  background-color: green;
+                  border-radius: 100%;
+              }
+  
+              50% {
+                  background-color: orange;
+              }
+  
+              100% {
+                  background-color: red;
+              }
+          } */
