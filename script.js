@@ -80,14 +80,15 @@ Array.from(boxes).forEach( element=>{
         if(boxText.innerText === "") {
          boxText.innerText = turn.toUpperCase()
         turn = changeTurn();
-         audioTurn.play();
-         checkWin();
-         
-         if(turn === "x") {
+            if(turn === "x") {
             boxText.style.color = "yellow";
          } else {
             boxText.style.color = "orange";
          }
+         audioTurn.play();
+         checkWin();
+         
+         
          if(!isGameOver){
                 document.getElementsByClassName("info")[0].innerText = "Turn for " + turn.toUpperCase()
             
